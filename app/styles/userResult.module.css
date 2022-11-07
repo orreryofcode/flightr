@@ -1,0 +1,33 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex: 2;
+  overflow: hidden;
+  /* padding: 2.5rem 3rem; */
+}
+
+.location__img {
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.8)
+  );
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+
+.location {
+  padding: 2.5rem 3rem;
+  color: #fff;
+  position: absolute;
+}
+
+.location__title {
+  font-size: 5rem;
+}
+
+.location__text {
+  font-size: 1.6rem;
+}

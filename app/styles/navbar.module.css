@@ -1,0 +1,23 @@
+.nav__container {
+  background-color: #060606;
+  color: #fff;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav__item {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-left: 3rem;
+}
+
+.nav__item:visited,
+.nav__item:active {
+  color: #fff;
+}
