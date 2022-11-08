@@ -1,0 +1,3 @@
+1. Rework the user options and come up with a better way to render a final decision based on selections
+2. Learn more about how NextJS Image component handles dynamic src attribute. 
+3. Come up with final styling. 
