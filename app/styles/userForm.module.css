@@ -22,12 +22,7 @@
 .formgroup__options {
   display: flex;
   padding: 2rem 2rem;
-  justify-content: space-around;
-}
-
-.formgroup__temp {
-  display: block;
-  padding: 1rem;
+  justify-content: space-evenly;
 }
 
 .formgroup__item {

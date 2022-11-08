@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 
 import styles from "../styles/userForm.module.css";
 
@@ -7,9 +7,6 @@ export default function UserForm() {
   const tempBoxes = document.querySelectorAll(".temp");
 
   const handleChange = (e) => {
-    // Todo:
-    // 1. When a new item choice is checked, that item should be moved into the tempChoice array and the previous value from the same group should be removed.
-
     let item = e.target.value;
 
     // Push element into array if checked
@@ -17,22 +14,15 @@ export default function UserForm() {
       setTempChoice((oldArray) => [...oldArray, e.target.value]);
     }
 
-    // Remove element from array when unchecked
     if (!e.target.checked) {
       setTempChoice((oldArray) =>
         oldArray.filter((element) => element !== item)
       );
     }
-
-    tempBoxes.forEach((box) => {
-      if (box.value !== item) {
-        box.checked = false;
-      }
-    });
   };
 
   // Testing purposes
-  console.log("State array for this:" + tempChoice);
+  // console.log(tempChoice);
 
   return (
     <>
@@ -40,39 +30,114 @@ export default function UserForm() {
         <h1 className={styles.form__heading}>Heading</h1>
 
         <div className={styles.formgroup__options}>
-          <div className={styles.formgroup__item}>
-            <input
-              type='checkbox'
-              value='Cold'
-              id='Cold'
-              onChange={handleChange}
-              className='temp'
-            />
-            <label htmlFor='Cold'>Cold</label>
+          <div className={styles.formgroup__temp}>
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Cold'
+                id='Cold'
+                onChange={handleChange}
+                className='temp'
+              />
+              <label htmlFor='Cold'>Cold</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Warm'
+                id='Warm'
+                onChange={handleChange}
+                className='temp'
+              />
+              <label htmlFor='Warm'>Warm</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Hot'
+                id='Hot'
+                onChange={handleChange}
+                className='temp'
+              />
+              <label htmlFor='Hot'>Hot</label>
+            </div>
           </div>
 
-          <div className={styles.formgroup__item}>
-            <input
-              type='checkbox'
-              value='Warm'
-              id='Warm'
-              onChange={handleChange}
-              className='temp'
-            />
-            <label htmlFor='Warm'>Warm</label>
+          <div className={styles.formgroup__distance}>
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Short'
+                id='Short'
+                onChange={handleChange}
+                className='distance'
+              />
+              <label htmlFor='Short'>Short</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Medium'
+                id='Medium'
+                onChange={handleChange}
+                className='distance'
+              />
+              <label htmlFor='Medium'>Medium</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Far'
+                id='Far'
+                onChange={handleChange}
+                className='distance'
+              />
+              <label htmlFor='Far'>Far</label>
+            </div>
           </div>
 
-          <div className={styles.formgroup__item}>
-            <input
-              type='checkbox'
-              value='Hot'
-              id='Hot'
-              onChange={handleChange}
-              className='temp'
-            />
-            <label htmlFor='Hot'>Hot</label>
+          <div className={styles.formgroup__cost}>
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Cheap'
+                id='Cheap'
+                onChange={handleChange}
+                className='cost'
+              />
+              <label htmlFor='Cheap'>$</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Reasonable'
+                id='Reasonable'
+                onChange={handleChange}
+                className='cost'
+              />
+              <label htmlFor='Reasonable'>$$</label>
+            </div>
+
+            <div className={styles.formgroup__item}>
+              <input
+                type='checkbox'
+                value='Expensive'
+                id='Expensive'
+                onChange={handleChange}
+                className='cost'
+              />
+              <label htmlFor='Expensive'>$$$</label>
+            </div>
           </div>
         </div>
+
+        <button>Get location</button>
+
         {/* <form action='#' className={styles.formgroup}>
           <div className={styles.formgroup__options}>
             <div className={styles.formgroup__temp}>
