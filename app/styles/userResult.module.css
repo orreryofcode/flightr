@@ -4,7 +4,7 @@
   align-items: flex-end;
   flex: 2;
   overflow: hidden;
-  /* padding: 2.5rem 3rem; */
+  padding: 1rem 1rem;
 }
 
 .location__img {

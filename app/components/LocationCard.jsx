@@ -1,15 +1,15 @@
 import Image from "next/image";
-import london from "../../public/imgs/london.jpg";
 import styles from "../styles/locationCard.module.css";
 
-export default function LocationCard({ name, size }) {
+export default function LocationCard({ name, img, size }) {
   return (
     <div className={styles.card__container}>
       <div className={styles.img__container}>
         <Image
           className={styles.card__img}
-          src={london}
+          src={`/imgs/${img}.jpg`}
           width={400}
+          height={300}
           alt='image of destination'></Image>
       </div>
 

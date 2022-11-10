@@ -3,26 +3,30 @@ import { useState } from "react";
 import styles from "../styles/userForm.module.css";
 
 export default function UserForm() {
-  const [tempChoice, setTempChoice] = useState([]);
+  const [choice, setChoice] = useState([]);
   const tempBoxes = document.querySelectorAll(".temp");
 
   const handleChange = (e) => {
-    let item = e.target.value;
-
     // Push element into array if checked
     if (e.target.checked) {
-      setTempChoice((oldArray) => [...oldArray, e.target.value]);
+      setChoice((prevState) => [...prevState, e.target.value]);
     }
 
+    // Remove unchecked item from array
     if (!e.target.checked) {
-      setTempChoice((oldArray) =>
-        oldArray.filter((element) => element !== item)
-      );
+      let removedChoice = e.target.value;
+
+      if (choice.includes(removedChoice)) {
+        let indexToRemove = choice.indexOf(removedChoice);
+
+        choice.splice(indexToRemove, 1);
+        setChoice([...choice]);
+      }
     }
   };
 
   // Testing purposes
-  // console.log(tempChoice);
+  console.log(choice);
 
   return (
     <>
@@ -136,7 +140,7 @@ export default function UserForm() {
           </div>
         </div>
 
-        <button>Get location</button>
+        <button className={styles.btn}>Get location</button>
 
         {/* <form action='#' className={styles.formgroup}>
           <div className={styles.formgroup__options}>
