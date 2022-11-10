@@ -9,12 +9,12 @@ const locations = [
   {
     id: 2,
     name: "Tokyo",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Cold", "Far", "Reasonable"],
   },
   {
     id: 3,
     name: "Sydney",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Hot", "Far", "Expensive"],
   },
   {
     id: 4,
@@ -24,17 +24,17 @@ const locations = [
   {
     id: 5,
     name: "Munich",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Cold", "Close", "Cheap"],
   },
   {
     id: 6,
     name: "Los Angeles",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Warm", "Medium", "Reasonable"],
   },
   {
     id: 7,
     name: "Mykonos",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Warm", "Close", "Expensive"],
   },
 ];
 

@@ -1,32 +1,29 @@
-import { useState } from "react";
-
 import styles from "../styles/userForm.module.css";
 
-export default function UserForm() {
-  const [choice, setChoice] = useState([]);
-  const tempBoxes = document.querySelectorAll(".temp");
+export default function UserForm({ handleChange, finalDestination }) {
+  // const [choice, setChoice] = useState([]);
 
-  const handleChange = (e) => {
-    // Push element into array if checked
-    if (e.target.checked) {
-      setChoice((prevState) => [...prevState, e.target.value]);
-    }
+  // const handleChange = (e) => {
+  //   // Push element into array if checked
+  //   if (e.target.checked) {
+  //     setChoice((prevState) => [...prevState, e.target.value]);
+  //   }
 
-    // Remove unchecked item from array
-    if (!e.target.checked) {
-      let removedChoice = e.target.value;
+  //   // Remove unchecked item from array
+  //   if (!e.target.checked) {
+  //     let removedChoice = e.target.value;
 
-      if (choice.includes(removedChoice)) {
-        let indexToRemove = choice.indexOf(removedChoice);
+  //     if (choice.includes(removedChoice)) {
+  //       let indexToRemove = choice.indexOf(removedChoice);
 
-        choice.splice(indexToRemove, 1);
-        setChoice([...choice]);
-      }
-    }
-  };
+  //       choice.splice(indexToRemove, 1);
+  //       setChoice([...choice]);
+  //     }
+  //   }
+  // };
 
-  // Testing purposes
-  console.log(choice);
+  // // Testing purposes
+  // console.log(choice);
 
   return (
     <>
@@ -140,7 +137,9 @@ export default function UserForm() {
           </div>
         </div>
 
-        <button className={styles.btn}>Get location</button>
+        <button className={styles.btn} onClick={finalDestination}>
+          Get location
+        </button>
 
         {/* <form action='#' className={styles.formgroup}>
           <div className={styles.formgroup__options}>
