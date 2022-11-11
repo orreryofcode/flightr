@@ -19,7 +19,7 @@ const locations = [
   {
     id: 4,
     name: "Toronto",
-    tags: ["Warm", "Far", "Cheap"],
+    tags: ["Warm", "Far", "Reasonable"],
   },
   {
     id: 5,

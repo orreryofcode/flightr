@@ -6,6 +6,7 @@ import styles from "../styles/userSelection.module.css";
 
 export default function UserDashboard() {
   const [choice, setChoice] = useState([]);
+  const [destination, setDestination] = useState("");
 
   const handleChange = (e) => {
     // Push element into array if checked
@@ -42,19 +43,22 @@ export default function UserDashboard() {
 
         if (location.tags.includes(choice[i])) {
           possibleSelections.push(location.name);
+          console.log(possibleSelections);
         }
       }
     });
   };
 
   const generateRandomNumber = () => {
-    return Math.floor(Math.random() * choice.length);
+    return Math.floor(Math.random() * possibleSelections.length);
   };
 
   let finalDestination = () => {
     findMatches();
-    console.log(possibleSelections[generateRandomNumber()]);
+    setDestination(possibleSelections[generateRandomNumber()]);
   };
+
+  console.log(destination);
 
   return (
     <div className={styles.container}>
@@ -62,7 +66,7 @@ export default function UserDashboard() {
         handleChange={handleChange}
         finalDestination={finalDestination}
       />
-      <UserResult />
+      <UserResult destination={destination} />
     </div>
   );
 }

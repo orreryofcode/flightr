@@ -140,49 +140,6 @@ export default function UserForm({ handleChange, finalDestination }) {
         <button className={styles.btn} onClick={finalDestination}>
           Get location
         </button>
-
-        {/* <form action='#' className={styles.formgroup}>
-          <div className={styles.formgroup__options}>
-            <div className={styles.formgroup__temp}>
-              <div className={styles.formgroup__item}>
-                <input type='checkbox' className='temp' value='Cold' />
-                <label htmlFor=''>Cold</label>
-              </div>
-              <div className={styles.formgroup__item}>
-                <input
-                  type='checkbox'
-                  className='temp'
-                  value='Warm'
-                  onChange={handleChange}
-                />
-                <label htmlFor=''>Warm</label>
-              </div>
-              <div className={styles.formgroup__item}>
-                <input type='checkbox' className='temp' value='Hot' />
-                <label htmlFor=''>Hot</label>
-              </div>
-            </div>
-            <div className={styles.formgroup__temp}>
-              <div className={styles.formgroup__item}>
-                <input type='checkbox' />
-                <label htmlFor=''>Short</label>
-              </div>
-
-              <div className={styles.formgroup__item}>
-                <input type='checkbox' />
-                <label htmlFor=''>Medium</label>
-              </div>
-              <div className={styles.formgroup__item}>
-                <input type='checkbox' />
-                <label htmlFor=''>Far</label>
-              </div>
-            </div>
-          </div>
-
-          <button type='submit' className={styles.btn}>
-            Get Location!
-          </button>
-        </form> */}
       </div>
     </>
   );
