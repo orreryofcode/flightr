@@ -1,37 +1,14 @@
 import styles from "../styles/userForm.module.css";
 
 export default function UserForm({ handleChange, finalDestination }) {
-  // const [choice, setChoice] = useState([]);
-
-  // const handleChange = (e) => {
-  //   // Push element into array if checked
-  //   if (e.target.checked) {
-  //     setChoice((prevState) => [...prevState, e.target.value]);
-  //   }
-
-  //   // Remove unchecked item from array
-  //   if (!e.target.checked) {
-  //     let removedChoice = e.target.value;
-
-  //     if (choice.includes(removedChoice)) {
-  //       let indexToRemove = choice.indexOf(removedChoice);
-
-  //       choice.splice(indexToRemove, 1);
-  //       setChoice([...choice]);
-  //     }
-  //   }
-  // };
-
-  // // Testing purposes
-  // console.log(choice);
-
   return (
     <>
       <div className={styles.container}>
-        <h1 className={styles.form__heading}>Heading</h1>
+        <h1 className={styles.form__heading}>I want to go somewhere...</h1>
 
         <div className={styles.formgroup__options}>
           <div className={styles.formgroup__temp}>
+            <h3 className={styles.option__heading}>Temperature</h3>
             <div className={styles.formgroup__item}>
               <input
                 type='checkbox'
@@ -67,6 +44,7 @@ export default function UserForm({ handleChange, finalDestination }) {
           </div>
 
           <div className={styles.formgroup__distance}>
+            <h3 className={styles.option__heading}>Distance</h3>
             <div className={styles.formgroup__item}>
               <input
                 type='checkbox'
@@ -102,6 +80,7 @@ export default function UserForm({ handleChange, finalDestination }) {
           </div>
 
           <div className={styles.formgroup__cost}>
+            <h3 className={styles.option__heading}>Cost</h3>
             <div className={styles.formgroup__item}>
               <input
                 type='checkbox'

@@ -24,7 +24,7 @@ const locations = [
   {
     id: 5,
     name: "Munich",
-    tags: ["Cold", "Close", "Cheap"],
+    tags: ["Cold", "Short", "Cheap"],
   },
   {
     id: 6,
@@ -34,7 +34,7 @@ const locations = [
   {
     id: 7,
     name: "Mykonos",
-    tags: ["Warm", "Close", "Expensive"],
+    tags: ["Warm", "Short", "Expensive"],
   },
 ];
 
