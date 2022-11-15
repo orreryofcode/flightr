@@ -1,3 +1,1 @@
-1. Learn more about how NextJS Image component handles dynamic src attribute. 
-2. Come up with final styling. 
-3. Add a loading state for the UserResult component
+1. Add a loading state for the UserResult component (Maybe??)
