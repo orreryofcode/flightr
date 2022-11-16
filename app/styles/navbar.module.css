@@ -8,16 +8,22 @@
 
 .nav__list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__item {
   font-size: 1.6rem;
   font-weight: 700;
   margin-left: 3rem;
+  color: #fff;
 }
 
 .nav__item:visited,
 .nav__item:active {
   color: #fff;
+}
+
+.nav__logo {
+  font-size: 2.5rem;
 }

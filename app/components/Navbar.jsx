@@ -5,14 +5,8 @@ export default function Navbar() {
     <>
       <div>
         <nav className={styles.nav__container}>
-          <h1>LOGO</h1>
+          <h2 className={styles.nav__logo}>Travlr</h2>
           <ul className={styles.nav__list}>
-            <li>
-              {" "}
-              <a className={styles.nav__item} href='#'>
-                Home
-              </a>
-            </li>
             <li>
               <a className={styles.nav__item} href='#'>
                 Destinations
