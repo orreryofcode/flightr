@@ -7,7 +7,7 @@ export default function UserForm({ handleChange, finalDestination }) {
         <h1 className={styles.form__heading}>I want to go somewhere...</h1>
 
         <div className={styles.formgroup__options}>
-          <div className={styles.formgroup__temp}>
+          <div className={styles.formgroup__container}>
             <h3 className={styles.option__heading}>Temperature</h3>
             <div className={styles.formgroup__item}>
               <input
@@ -43,7 +43,7 @@ export default function UserForm({ handleChange, finalDestination }) {
             </div>
           </div>
 
-          <div className={styles.formgroup__distance}>
+          <div className={styles.formgroup__container}>
             <h3 className={styles.option__heading}>Distance</h3>
             <div className={styles.formgroup__item}>
               <input
@@ -79,7 +79,7 @@ export default function UserForm({ handleChange, finalDestination }) {
             </div>
           </div>
 
-          <div className={styles.formgroup__cost}>
+          <div className={styles.formgroup__container}>
             <h3 className={styles.option__heading}>Cost</h3>
             <div className={styles.formgroup__item}>
               <input

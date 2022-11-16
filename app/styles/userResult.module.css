@@ -31,3 +31,15 @@
 .location__text {
   font-size: 1.6rem;
 }
+
+@media (max-width: 1400px) {
+  .location {
+    padding: 2.5rem 3rem;
+    color: #fff;
+    position: relative;
+  }
+
+  .location__text {
+    font-size: 1.5rem;
+  }
+}
